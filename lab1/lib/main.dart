@@ -5,6 +5,7 @@ import 'models/library.dart';
 import 'models/library_item.dart';
 import 'models/book.dart';
 import 'models/magazine.dart';
+import 'screens/todo_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -158,7 +159,18 @@ class _HomePageState extends State<HomePage> {
     }
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Lab 2')),
+      appBar: AppBar(
+        title: const Text('Lab 3'),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.checklist),
+            onPressed: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) => const TodoScreen()),
+            ),
+          ),
+        ],
+      ),
       body: ListView(
         children: [
           // TASK I
