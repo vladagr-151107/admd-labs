@@ -5,6 +5,5 @@ class Book extends LibraryItem{
   int? pageCount;
   String? isbn;
 
-  Book({required String title, String? author, DateTime? publishDate, User? borrower, DateTime? dueDate, this.pageCount, this.isbn})
-  : super(title: title, author:author, publishDate:publishDate, borrower:borrower, dueDate:dueDate);
+  Book({required super.title, super.author, super.publishDate, super.borrower, super.dueDate, this.pageCount, this.isbn});
 }

@@ -201,7 +201,7 @@ class _TodoState extends State<TodoScreen> {
           // Retry log
           ValueListenableBuilder<List<String>>(
             valueListenable: retryLog,
-            builder: (_, log, __) => Container(
+            builder: (context, log, child) => Container(
               height: 110,
               width: double.infinity,
               color: Colors.black12,
